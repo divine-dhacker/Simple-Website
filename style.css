@@ -433,36 +433,140 @@ body, ul, li {
 
   
   /* Responsive Design */
-  @media (max-width: 768px) {
-    .nav-links {
-      display: block;
-      text-align: center;
-      background-color: #6200ea;
-      padding: 1rem 0;
-    }
-  
-    .nav-item {
-      margin: 0.5rem 0;
-    }
-  
-    .hero h1 {
-      font-size: 2rem;
-    }
-  
-    .hero p {
-      font-size: 1rem;
-    }
-  
-    .hero-button {
-      padding: 0.6rem 1.5rem;
-      font-size: 0.9rem;
-    }
-
-    .contact-info,
-    .map {
-      display: block; /* Stacks sections vertically */
-      width: 100%; /* Full width for stacked layout */
-      margin-bottom: 20px; /* Adds space between sections */
-    }
+  /* Responsive Design */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column; /* Stack links vertically */
+    gap: 1rem; /* Add spacing between links */
   }
-  
+
+  .hero {
+    flex-direction: column; /* Stack content */
+    padding: 1rem; /* Adjust padding */
+  }
+
+  .hero h1 {
+    font-size: 2rem; /* Adjust heading size */
+  }
+
+  .hero p {
+    font-size: 1rem; /* Adjust paragraph size */
+  }
+
+  .hero-button {
+    padding: 0.6rem 1.2rem; /* Smaller button padding */
+    font-size: 0.9rem; /* Adjust button text size */
+  }
+
+  .content-section h2 {
+    font-size: 1.8rem; /* Reduce heading size */
+  }
+
+  .about-section {
+    padding: 2rem 1rem; /* Adjust padding */
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr; /* Single column grid */
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr; /* Single column layout */
+  }
+
+  .contact-info, 
+  .map {
+    width: 100%; /* Full width for stacked sections */
+    margin-bottom: 1rem; /* Add space between sections */
+  }
+}
+
+/* Responsive Design for Smaller Devices */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0.5rem 1rem; /* Reduce navbar padding */
+  }
+
+  .logo {
+    font-size: 1.5rem; /* Reduce logo size */
+  }
+
+  .hero h1 {
+    font-size: 1.5rem; /* Smaller heading size */
+  }
+
+  .hero p {
+    font-size: 0.9rem; /* Smaller paragraph size */
+  }
+
+  .about-content {
+    padding: 1rem; /* Compact content */
+  }
+
+  .services-grid {
+    gap: 1rem; /* Smaller gaps */
+  }
+
+  .contact-form {
+    padding: 1rem; /* Reduce form padding */
+  }
+
+  .contact-form input, 
+  .contact-form textarea {
+    font-size: 0.8rem; /* Smaller input font size */
+  }
+
+  .contact-form button {
+    font-size: 0.9rem; /* Smaller button font size */
+    padding: 0.6rem 1.2rem; /* Compact button padding */
+  }
+}
+
+  /* Hamburger Menu Icon */
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+  margin-left: auto;
+}
+
+.menu-icon span {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  border-radius: 2px;
+}
+
+/* Show Menu Icon on Small Screens */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: flex;
+  }
+
+  .menu-icon span {
+    background-color: #f0f0f0;
+  }
+
+  .nav-links {
+    display: none; /* Hide nav by default */
+    flex-direction: column;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: absolute;
+    top: 43px; /* Adjust based on header height */
+    right: 0;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.active {
+    display: flex;
+    background:  #6200ea;
+  }
+
+  .nav-item {
+    padding: 10px 0;
+  }
+}
