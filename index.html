@@ -9,8 +9,13 @@
 <body>
   <header class="navbar">
     <div class="logo">MySite</div>
+    <div class="menu-icon" id="menu-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
     <nav>
-      <ul class="nav-links">
+      <ul class="nav-links" id="nav-links">
         <li><a href="#home" class="nav-item">Home</a></li>
         <li><a href="#about" class="nav-item">About</a></li>
         <li><a href="#services" class="nav-item">Services</a></li>
@@ -18,6 +23,7 @@
       </ul>
     </nav>
   </header>
+  
 
   <!-- Landing Page Hero Section -->
   <section class="hero" id="home">
@@ -117,6 +123,23 @@
     <iframe src="https://www.google.com/maps/embed?pb=...YOUR_GOOGLE_MAPS_URL..." width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
   </div>
 </section>
+
+<!-- Script -->
+<script>
+  
+// Get the elements
+const menuIcon = document.querySelector('.menu-icon');
+const navLinks = document.querySelector('.nav-links');
+const navlinksbg = document.querySelector('.nav-links-bg');
+
+// Add event listener for the menu icon
+menuIcon.addEventListener('click', () => {
+  // Toggle the 'active' class on the navLinks element
+  navLinks.classList.toggle('active');
+  navlinksbg.classList.toggle('active');
+});
+
+</script>
 
 </body>
 </html>
