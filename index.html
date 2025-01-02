@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colorful Landing Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">MySite</div>
+    <div class="menu-icon" id="menu-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="nav-item">Home</a></li>
+        <li><a href="#about" class="nav-item">About</a></li>
+        <li><a href="#services" class="nav-item">Services</a></li>
+        <li><a href="#contact" class="nav-item">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+
+  <!-- Landing Page Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Welcome to MySite!</h1>
+      <p>Your one-stop solution for amazing services.</p>
+      <a href="#services" class="hero-button">Explore Services</a>
+    </div>
+  </section>
+
+  <!-- Placeholder for other sections -->
+  <section id="about" class="about-section">
+    <div class="about-grid">
+      <div class="about-content">
+        <h2>About Us</h2>
+        <p>
+          At MySite, we are committed to delivering world-class services that exceed expectations. 
+          Our innovative team combines creativity and technology to craft solutions tailored to your needs.
+        </p>
+        <p>
+          We believe in a collaborative approach, working closely with clients to turn ideas into reality. 
+          Let us help you achieve your goals with passion, precision, and expertise.
+        </p>
+        <a href="#contact" class="btn btn-primary">Get in Touch</a>
+      </div>
+      <div class="about-image">
+        <img src="./images/brain-booster-pills-still-life.avif" alt="Innovation and Creativity">
+      </div>
+    </div>
+  </section>
+  
+  
+
+  <section id="services" class="content-section">
+    <h2>Our Services</h2>
+    <p>Explore our wide range of services tailored to meet your needs.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="./images/people-wearing-futuristic-high-tech-virtual-reality-glasses.avif" alt="Service 1" class="service-image">
+        <h3>Service 1</h3>
+        <p>Description of the first service provided by the company.</p>
+        <a href="#contact" class="btn btn-primary">Learn More</a>
+      </div>
+      <div class="service-card">
+        <img src="./images/artificial-intelligence-line-creative-heart-shaped-banner-vector-i-love-ai-illustration.avif" alt="Service 2" class="service-image">
+        <h3>Service 2</h3>
+        <p>Description of the second service provided by the company.</p>
+        <a href="#contact" class="btn btn-primary">Learn More</a>
+      </div>
+      <div class="service-card">
+        <img src="./images/african-american-girl-holds-phone-with-isolated-greenscreen-home.avif" alt="Service 3" class="service-image">
+        <h3>Service 3</h3>
+        <p>Description of the third service provided by the company.</p>
+        <a href="#contact" class="btn btn-primary">Learn More</a>
+      </div>
+      <div class="service-card">
+        <img src="./images/man-using-vr-glasses.avif" alt="Service 4" class="service-image">
+        <h3>Service 4</h3>
+        <p>Description of the third service provided by the company.</p>
+        <a href="#contact" class="btn btn-primary">Learn More</a>
+      </div>
+    </div>
+  </section>
+  
+
+  <section id="contact" class="content-section contact-section">
+  <h2>Contact Us</h2>
+  <p>We'd love to hear from you! Fill out the form below or reach us directly.</p>
+  
+  <!-- Contact Form -->
+  <form action="#" method="POST" class="contact-form">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required placeholder="Your Name">
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required placeholder="Your Email">
+    </div>
+    <div class="form-group">
+      <label for="message">Message</label>
+      <textarea id="message" name="message" required placeholder="Your Message"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Send Message</button>
+  </form>
+
+  <!-- Contact Info (Optional) -->
+  <div class="contact-info">
+    <h3>Other Ways to Reach Us:</h3>
+    <p>Email: contact@mysite.com</p>
+    <p>Phone: +1 234 567 890</p>
+    <p>Address: 123 Main Street, City, Country</p>
+  </div>
+
+  <!-- Google Map (Optional) -->
+  <div class="map">
+    <iframe src="https://www.google.com/maps/embed?pb=...YOUR_GOOGLE_MAPS_URL..." width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+</section>
+
+<!-- Script -->
+<script>
+  
+// Get the elements
+const menuIcon = document.querySelector('.menu-icon');
+const navLinks = document.querySelector('.nav-links');
+const navlinksbg = document.querySelector('.nav-links-bg');
+
+// Add event listener for the menu icon
+menuIcon.addEventListener('click', () => {
+  // Toggle the 'active' class on the navLinks element
+  navLinks.classList.toggle('active');
+  navlinksbg.classList.toggle('active');
+});
+
+</script>
+
+</body>
+</html>
